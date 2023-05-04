@@ -28,3 +28,27 @@ def test_bubble_sort_invalid():
     result = Lab3.bubble_sort(input_arr, 3)
 
     assert (result == [])
+
+def test_bubble_sort_bob():
+    result = []
+    input_arr = ["bob"]
+
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_DESCENDING)
+
+    assert (result == 100)
+
+def test_bubble_sort_ten():
+    result = []
+    input_arr = [999, 995, 369, 69, 911, 933, 972, 666, 958, 123, 456]
+
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_DESCENDING)
+
+    assert (result == 3)
+
+def test_bubble_sort_zero():
+    result = []
+    input_arr = []
+
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_DESCENDING)
+
+    assert (result == 1)
